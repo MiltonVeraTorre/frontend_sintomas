@@ -11,6 +11,7 @@ import { PacienteInt } from "@/types/ModelTypes";
 import { useDispatch } from "react-redux";
 import { loadUserEvents } from "@/redux/thunks/appThunk";
 import UserGraphs from "./UserGraphs";
+import { setSelectedPatient } from "@/redux/slices/appSlice";
 
 export default function page() {
   // Estados de la busqueda
@@ -80,8 +81,10 @@ function UserSearchSelect({ id,nombre,apellido,clearSearch}:UserSearchSelect) {
     <>
       <button 
       onClick={()=>{
+        dispatch(setSelectedPatient(id))
         clearSearch()
-        dispatch(loadUserEvents(id))}}
+        dispatch(loadUserEvents(id))
+      }}
       className="p-2 w-full text-left capitalize" type="button">
         {nombre} {apellido}
       </button>
