@@ -14,7 +14,7 @@ export const loadUserEvents = createAsyncThunk(
             return;
         }
     
-        const { data } = await clienteAxios<UserEventInt[]>(`/registros/${pacienteId}`, config);
+        const { data } = await clienteAxios<UserEventInt>(`/registros/${pacienteId}`, config);
     
         return data;
         } catch (error: any) {

@@ -1,0 +1,22 @@
+/* Estilos del calendario de la pantalla de reserva, este no posee interfaces tan directar para modificar los estilos asi
+   que hay que sobreescribir los estilos
+*/
+
+/* Estilos del contenedor del evento*/
+
+.rbc-event{
+    --tw-bg-opacity: 1;
+    background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+/* Estilos de la hora del evento*/
+.rbc-event-label{
+    font-size:1rem;
+
+}
+/* Estilos del titlo del evento*/
+.rbc-event-content{
+    font-size: 1.125rem ;
+    font-weight: 700;
+
+}

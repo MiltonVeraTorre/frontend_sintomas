@@ -1,8 +1,14 @@
 import { Antecedente, Nota, Registro } from "./ModelTypes"
 
 export interface UserEventInt{
-    fecha:string
+    registrosCuantitativos : UserGraphData[]
+    registrosSintomas : UserGraphData[]
+}
+export interface UserGraphData{
+    nombre: string
     registros: Registro[]
-    notas: Nota[]
-    antecedentes: Antecedente[]
+}
+export interface GraficaData{
+    label:string
+    value:number
 }

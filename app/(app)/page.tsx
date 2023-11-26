@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Header from "./Header";
-import RegistersCalendar from "./RegistersCalendar";
 import { Input,Button } from "@nextui-org/react";
 import { useDebounce } from "@/hooks/useDebounce";
 import useSWR from "swr";
@@ -11,6 +10,7 @@ import { fetcher } from "@/config/fetcher";
 import { PacienteInt } from "@/types/ModelTypes";
 import { useDispatch } from "react-redux";
 import { loadUserEvents } from "@/redux/thunks/appThunk";
+import UserGraphs from "./UserGraphs";
 
 export default function page() {
   // Estados de la busqueda
@@ -62,19 +62,8 @@ export default function page() {
       </div>
 
       <div className="mt-12 max-w-7xl mx-auto">
-        <div>
-          <Button
-            type="button"
-            color="primary"
-            size="lg"
-            variant="solid"
-            
-          >
-            Descargar Datos de Paciente
-
-          </Button>
-        </div>
-        <RegistersCalendar />
+        
+        <UserGraphs />
       </div>
     </div>
   );

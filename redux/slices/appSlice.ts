@@ -8,7 +8,8 @@ export const appSlice = createSlice({
     name: 'app',
     initialState:{
         selectedPatient: null as null | PacienteInt,
-        userEvents: null as null | UserEventInt[]
+        userGraph: null as null | UserEventInt,
+        isLoading: false,
     },
     reducers:{
         setSelectedPatient: (state, action) => {
@@ -18,18 +19,21 @@ export const appSlice = createSlice({
     extraReducers(builder) {
         builder.addCase(loadUserEvents.fulfilled, (state, action) => {
 
+            state.isLoading = false;
             if(!action.payload){
-                state.userEvents = null;
+                state.userGraph = null;
                 return;
             }
 
-            state.userEvents = action.payload;
+            state.userGraph = action.payload;
         });
         builder.addCase(loadUserEvents.rejected, (state, action) => {
-            state.userEvents = null;
+            state.isLoading = false;
+            state.userGraph = null;
         });
         builder.addCase(loadUserEvents.pending, (state, action) => {
-            state.userEvents = null;
+            state.isLoading = true;
+            state.userGraph = null;
         });
     },
 
