@@ -3,11 +3,11 @@ export interface DoctorInt {
     nombre: string;
     correo: string;
     password: string;
-    pacientes: Paciente[];
+    pacientes: PacienteInt[];
     token ?: string;
   }
   
-export   interface Paciente {
+export interface PacienteInt {
     id: number;
     nombre: string;
     apellido: string;
@@ -26,7 +26,7 @@ export interface Nota {
     fecha: Date;
     nota: string;
     pacienteId: number;
-    paciente: Paciente;
+    paciente: PacienteInt;
   }
   
 export interface Antecedente {
@@ -35,7 +35,7 @@ export interface Antecedente {
     descripcion: string;
     fecha: Date;
     pacienteId: number;
-    paciente: Paciente;
+    paciente: PacienteInt;
   }
   
 export interface TipoRegistro {
@@ -45,7 +45,7 @@ export interface TipoRegistro {
     descripcion: string;
     unidad: string | null;
     pacienteId: number | null;
-    paciente: Paciente | null;
+    paciente: PacienteInt | null;
     registros: Registro[];
   }
   
@@ -56,6 +56,6 @@ export  interface Registro {
     tipo: TipoRegistro;
     fecha: Date;
     pacienteId: number;
-    paciente: Paciente;
+    paciente: PacienteInt;
   }
   
