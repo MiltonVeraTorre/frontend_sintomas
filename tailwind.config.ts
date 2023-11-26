@@ -10,11 +10,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        '45vh': '45vh',
+        '50vh': '50vh',
+        '30vh': '30vh',
+        '70vh': '70vh',
+        '25vh': '25vh'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily:{
+        sans: ['Poppins', 'Roboto'],
+      }
     },
   },
   plugins: [nextui()],

@@ -13,6 +13,8 @@
     "@reduxjs/toolkit": "^1.9.7",
     "axios": "^1.6.2",
     "framer-motion": "^10.16.5",
+    "js-cookie": "^3.0.5",
+    "moment": "^2.29.4",
     "next": "14.0.3",
     "react": "^18",
     "react-big-calendar": "^1.8.5",
@@ -23,8 +25,10 @@
     "swr": "^2.2.4"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
+    "@types/react-big-calendar": "^1.8.5",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "postcss": "^8",
